@@ -1,0 +1,32 @@
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--green--);
+    padding: 15px 8px;
+    text-transform: capitalize;
+}
+nav h1{
+    color: var(--white--);
+    user-select: none;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+}
+nav ul li a{
+    text-decoration: none;
+    color: var(--white--);
+    padding: 10px;
+    transition: background .5s;
+    -webkit-transition: background .5s;
+    -moz-transition: background .5s;
+    -ms-transition: background .5s;
+    -o-transition: background .5s;
+}
+nav ul li a:hover{
+    background-color: var(--gray--);
+}
+nav ul li a:active{
+    background-color: var(--light-green--);
+}

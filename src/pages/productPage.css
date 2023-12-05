@@ -1,0 +1,110 @@
+.single-product{
+    display: flex;
+    height: 90vh;
+    width: 100vw;
+    color: var(--green--);
+}
+.single-product img{
+    width: 40%;
+    height: 100%;
+}
+.single-product-data{
+    width: 60%;
+}
+.single-product h2{
+    text-align: center;
+    padding: 15px;
+}
+.single-product-data-category{
+    font-size: 29px;
+    text-align: center;
+    padding: 1px 0 15px;
+}
+.single-product-data-description{
+    text-align: center;
+    padding: 15px;
+    min-height: 200px;
+}
+.single-product-data-extra{
+    display: flex;
+    justify-content: space-around;
+    padding: 15px;
+}
+.single-product-data-price, 
+.single-product-data-rate, 
+.single-product-data-count{
+    background-color: var(--light-green--);
+    color: var(--white--);
+    padding: 15px;
+    text-transform: capitalize;
+    user-select: none;
+}
+.single-product-functions{
+    display: flex;
+    justify-content: space-around;
+    padding: 15px;
+}
+.single-product-functions > button{
+    background-color: var(--green--);
+    color: var(--white--);
+    padding: 15px;
+    cursor: pointer;
+    border: 0;
+    outline: 0;
+    text-transform: capitalize;
+    transition: all .5s;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+}
+.single-product-functions > button:hover{
+    background-color: var(--light-green--);
+}
+.single-product-functions > button:active{
+    background-color: var(--gray--);
+}
+.single-product-function-quantity{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.single-product-function-quantity button{
+    width: 60px;
+    height: 50px;
+    background-color: var(--green--);
+    color: var(--white--);
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    font-size: 30px;
+    border-radius: 5xp;
+    transition: all .5s;
+    -webkit-border-radius: 5xp;
+    -moz-border-radius: 5xp;
+    -ms-border-radius: 5xp;
+    -o-border-radius: 5xp;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+}
+.single-product-function-quantity button:hover{
+    background-color: var(--light-green--);
+}
+.single-product-function-quantity button:active{
+    background-color: var(--gray--);
+}
+.single-product-function-quantity div{
+    width: 60px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--green--);
+}
