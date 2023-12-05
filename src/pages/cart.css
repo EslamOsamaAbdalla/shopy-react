@@ -1,3 +1,11 @@
+.cart-page-empty{
+    display: flex;
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
+    color: var(--green--);
+    text-transform: capitalize;
+}
 .cart-page{
     display: flex;
     flex-direction: column;

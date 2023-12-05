@@ -1,6 +1,6 @@
 import React, { useEffect, useReducer, useState } from 'react'
 import "./productPage.css"
-function ProductPage({product, setCart}) {
+function ProductPage({product, cart, setCart}) {
     const [data, setData] = useState()
     const [quantaty, dispatch] = useReducer(reducer, 1);
     useEffect(() => {
@@ -22,10 +22,18 @@ function ProductPage({product, setCart}) {
     const increase = ()=>{ if (data.rating.count > quantaty) {dispatch({type: "increase"})} }
     const deincrease = ()=>{ if (quantaty > 0) {dispatch({type: "deincrease"})} }
     const addToCart = ()=>{
-        setCart((prev)=>{ return [...prev, {
-            product: data,
-            quantaty : quantaty
-        }]})
+        if (cart != undefined) {
+            setCart((prev)=>{ return [...prev, {
+                product: data,
+                quantaty : quantaty
+            }]})
+        } else {
+            setCart([{
+                product: data,
+                quantaty : quantaty
+            }])
+        }
+        
     }
     return (
         <>

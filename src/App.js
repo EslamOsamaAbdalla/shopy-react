@@ -9,7 +9,7 @@ import ProductPage from './pages/productPage';
 function App() {
   const [storeProducts, setStoreProducts] = useState()
   const [product, setProduct] = useState()
-  const [cart, setCart] = useState([])
+  const [cart, setCart] = useState()
   useEffect(() => {
     storeApi()
   },[])
@@ -25,9 +25,9 @@ function App() {
           <Route path='/' index element={
           <Shop storeProducts={storeProducts} setProduct={setProduct}/>
           }/>
-          <Route path='/cart' element={<Cart cart={cart}/>}/>
+          <Route path='/cart' element={<Cart cart={cart} setCart={setCart}/>}/>
           <Route path='/product-page' element={
-          <ProductPage product={product} setCart={setCart}/>
+          <ProductPage product={product} setCart={setCart} cart={cart}/>
           }/>
           <Route path='*' element={<Nopage/>}/>
         </Routes>
