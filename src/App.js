@@ -6,6 +6,7 @@ import Shop from './pages/shop';
 import Cart from './pages/cart';
 import Nopage from "./pages/404"
 import ProductPage from './pages/productPage';
+import Checkout from './pages/checkout';
 function App() {
   const [storeProducts, setStoreProducts] = useState()
   const [product, setProduct] = useState()
@@ -29,6 +30,7 @@ function App() {
           <Route path='/product-page' element={
           <ProductPage product={product} setCart={setCart} cart={cart}/>
           }/>
+          <Route path='/checkout' element={<Checkout/>}/>
           <Route path='*' element={<Nopage/>}/>
         </Routes>
       </BrowserRouter>
