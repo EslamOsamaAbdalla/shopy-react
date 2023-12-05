@@ -11,6 +11,7 @@ function Products({image, title, price, rating, products, setProduct}) {
             fetch(`https://fakestoreapi.com/products/${product[0].id}`)
                 .then((res)=>{ return res.json()})
                 .then((res)=>{ setProduct(res)})
+                
         }
         getPage()
     }
