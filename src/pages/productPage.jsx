@@ -1,14 +1,20 @@
 import React, { useEffect, useReducer, useState } from 'react'
 import "./productPage.css"
+import { useParams } from 'react-router-dom';
 function ProductPage({product, cart, setCart}) {
     const [data, setData] = useState()
     const [quantaty, dispatch] = useReducer(reducer, 1);
     useEffect(() => {
-        setData(product)
+        productFilter()
         return () =>{
             setData()
         }
     }, [product])
+    let {id} = useParams()
+    let productFilter = async ()=>{
+        await fetch('https://fakestoreapi.com/products/'+id)
+            .then(res=>res.json()).then(json=>setData(json)).catch(error => console.error(error))
+    }
     function reducer(state, action){
         switch (action.type) {
             case "increase":
@@ -37,7 +43,7 @@ function ProductPage({product, cart, setCart}) {
     }
     return (
         <>
-            {data &&
+            {data ?
                 <div className='single-product'>
                     <img src={data.image} alt="image" />
                     <div className='single-product-data'>
@@ -59,7 +65,7 @@ function ProductPage({product, cart, setCart}) {
                             
                         </div>
                     </div>
-                </div>
+                </div> : "no product"
             }
         </>
     )

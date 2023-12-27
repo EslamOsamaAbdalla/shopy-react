@@ -7,7 +7,7 @@ function Shop({storeProducts, setProduct}) {
             {storeProducts ? storeProducts.map((products)=>{
                 return (<Products
                     key={products.id}
-                    products={products}
+                    param={products.id}
                     image={products.image}
                     title={products.title}
                     price={products.price}
